@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Scaffold without Terraform: Cursor Terraform/IAM commands and rules are only copied when using the Terraform branch (`_with_tf`).
 - Handler templates use `response` and `parseBody` from `@core/core.utils`.
 - Package metadata: `engines`, `repository`, `bugs`, `homepage`, `funding`, expanded `files` for published docs.
+- `package.json` repository, bugs, and homepage URLs now point at `github.com/B1LabsD3v/lambda-ya`.
 - GitHub: `.github/FUNDING.yml`, `CONTRIBUTING.md`, and CI workflow to validate scaffolds.
 - Cursor: English, expanded prompts for `lambda-test-local` and `lambda-terraform-iam`; Terraform rule descriptions in English.
 - Templates: JSDoc and shell/terraform comments in generated projects are English; sample `note` strings in modular ping response are English.

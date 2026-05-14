@@ -33,12 +33,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/b1labs/lambda-ya.git"
+    "url": "git+https://github.com/B1LabsD3v/lambda-ya.git"
   },
   "bugs": {
-    "url": "https://github.com/b1labs/lambda-ya/issues"
+    "url": "https://github.com/B1LabsD3v/lambda-ya/issues"
   },
-  "homepage": "https://github.com/b1labs/lambda-ya#readme",
+  "homepage": "https://github.com/B1LabsD3v/lambda-ya#readme",
   "funding": [
     {
       "type": "github",

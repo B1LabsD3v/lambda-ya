@@ -2,6 +2,8 @@
  * EXAMPLE — centralize reading environment variables.
  *
  * Copy patterns into `enviroments.config.ts` and keep `process.env` access scoped to `@config`.
+ *
+ * Excluded from `tsc` — reference only.
  */
 export function exampleReadEnv(name: string, fallback?: string): string {
   const v = process.env[name];

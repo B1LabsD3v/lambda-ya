@@ -26,16 +26,6 @@
 </p>
 
 <p align="center">
-  <a href="https://star-history.com/#b1labs/lambda-ya&amp;Date">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=b1labs/lambda-ya&amp;type=Date&amp;theme=dark" />
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=b1labs/lambda-ya&amp;type=Date" />
-      <img alt="Star history chart" src="https://api.star-history.com/svg?repos=b1labs/lambda-ya&amp;type=Date" />
-    </picture>
-  </a>
-</p>
-
-<p align="center">
   <img src="assets/hero.png" alt="lambda-ya — Scaffold AWS Lambda TypeScript projects (handlers and modular layouts, optional Terraform)" width="800" />
 </p>
 

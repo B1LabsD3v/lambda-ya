@@ -6,12 +6,14 @@
  *
  * @example
  * ```ts
- * import { describeExample } from "@services/s_example/example.service";
+ * import { describeExample } from "@services/s_example.example/example.example.service";
  * const msg = await describeExample("DEV_");
  * ```
+ *
+ * Excluded from `tsc` — reference only.
  */
 import { resolveTableName } from "@config/enviroments.config";
-import { getExampleItem } from "@infrastructure/r_example/example.repository";
+import { getExampleItem } from "@infrastructure/r_example.example/example.example.repository";
 
 export async function describeExample(stageMode: string | undefined): Promise<string> {
   const table = resolveTableName(stageMode);

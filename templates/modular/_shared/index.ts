@@ -1,35 +1,31 @@
 import { response } from "@core/core.utils";
-import { pingExampleHandler } from "@handlers/hl_example/ping.handler";
 import { AuthenticationError, NotFoundError, ValidationError } from "@types_/services.type";
-import type { APIGatewayProxyHandlerV2 } from "aws-lambda";
+import type { {{lambda_handler_type}} } from "aws-lambda";
 
 /**
  * AWS Lambda entrypoint (**modular** layout).
  *
  * - In AWS, set the Lambda handler to `dist/index.handler`.
- * - This file owns the HTTP contract (API Gateway HTTP API v2) and delegates domain work
+ * - This file owns the HTTP contract (API Gateway **{{api_gateway_version}}**: `{{lambda_event_type}}`) and delegates domain work
  *   to modules under `src/handlers`, `src/services`, and `src/repositories`.
  *
  * Recommended flow:
  * 1. Add routes or use cases under `src/handlers/...`.
  * 2. Keep `index.ts` thin: logging, try/catch, and mapping errors to HTTP responses.
  *
- * Sample route: `GET /health` → `pingExampleHandler`.
+ * `GET /health` is implemented inline so the project builds without compiling `example.example.*` reference files.
  */
-export const handler: APIGatewayProxyHandlerV2 = async (event) => {
+export const handler: {{lambda_handler_type}} = async (event) => {
   console.log("{{function_name}} invoked", {
-    path: event.rawPath,
-    method: event.requestContext?.http?.method ?? "UNKNOWN",
-    requestId: event.requestContext?.requestId,
+    {{log_fields}}
   });
 
   try {
-    if (event.rawPath === "/health" || event.requestContext?.http?.path === "/health") {
-      const data = await pingExampleHandler(event);
-      return response(200, { message: "ok", data });
+    if ({{health_route_condition}}) {
+      return response(200, { message: "ok", status: "healthy" });
     }
 
-    return response(404, { error: "Not Found", path: event.rawPath });
+    return response(404, { error: "Not Found", path: {{event_path_access}} });
   } catch (error) {
     console.error("Error processing request", { error });
 

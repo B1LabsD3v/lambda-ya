@@ -84,7 +84,7 @@ lambda-ya modular ~/projects/my-api --yes --no-terraform
 | `lambda-ya <type> <folder>` | Create scaffold in `folder` |
 | `lambda-ya create <type> <folder>` | Same as above |
 
-Common flags: `--yes`, `--terraform` / `--no-terraform`, `--aws-profile=`, `--aws-account-id=`, `--function-name=`, `--main-handler-file=`, `--main-handler-export=`, `--skip-install`.
+Common flags: `--yes`, `--terraform` / `--no-terraform`, `--api-gateway=v1|v2`, `--aws-profile=`, `--aws-account-id=`, `--function-name=`, `--main-handler-file=`, `--main-handler-export=`, `--skip-install`.
 
 ## Terraform vs zip-only
 

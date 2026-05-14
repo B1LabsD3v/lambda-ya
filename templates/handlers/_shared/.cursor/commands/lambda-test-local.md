@@ -15,7 +15,7 @@ Optionally add `__test__/event-example.json` and load it with `fs.readFileSync` 
 ## Preconditions (tell the user if missing)
 
 - Run `npm run build` so `dist/` exists and matches what AWS will execute.
-- Confirm which handler signature is exported from `index.ts` (usually `APIGatewayProxyHandlerV2` for HTTP API v2 in this scaffold).
+- Confirm which handler signature is exported from `index.ts` / the primary handler under `src/handlers/` (depends on `lambda-ya` scaffold: `--api-gateway=v1` → `APIGatewayProxyHandler`, `--api-gateway=v2` → `APIGatewayProxyHandlerV2`). The generated `__test__/test-local.js` matches that choice (it is copied from `test-local.v1.js` or `test-local.v2.js` at scaffold time).
 
 ## Discovery questionnaire (ask in chat before editing files)
 

@@ -75,7 +75,7 @@ npm link   # 이후 lambda-ya 직접 실행
 | `lambda-ya <유형> <폴더>` | 스캐폴드 생성 |
 | `lambda-ya create <유형> <폴더>` | 동일 |
 
-주요 플래그: `--yes`, `--terraform` / `--no-terraform`, `--aws-profile=`, `--aws-account-id=`, `--function-name=`, `--main-handler-file=`, `--main-handler-export=`, `--skip-install`.
+주요 플래그: `--yes`, `--terraform` / `--no-terraform`, `--api-gateway=v1|v2`, `--aws-profile=`, `--aws-account-id=`, `--function-name=`, `--main-handler-file=`, `--main-handler-export=`, `--skip-install`.
 
 ## Terraform vs zip만
 

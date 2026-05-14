@@ -75,7 +75,7 @@ npm link   # depois: lambda-ya ...
 | `lambda-ya <tipo> <pasta>` | Cria o scaffold |
 | `lambda-ya create <tipo> <pasta>` | Igual |
 
-Flags comuns: `--yes`, `--terraform` / `--no-terraform`, `--aws-profile=`, `--aws-account-id=`, `--function-name=`, `--main-handler-file=`, `--main-handler-export=`, `--skip-install`.
+Flags comuns: `--yes`, `--terraform` / `--no-terraform`, `--api-gateway=v1|v2`, `--aws-profile=`, `--aws-account-id=`, `--function-name=`, `--main-handler-file=`, `--main-handler-export=`, `--skip-install`.
 
 ## Terraform vs apenas zip
 

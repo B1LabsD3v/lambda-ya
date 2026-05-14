@@ -1,5 +1,7 @@
 /**
- * Run the compiled Lambda handler with a sample HTTP API v2 event (`GET /health`).
+ * Run the compiled Lambda handler with a minimal **API Gateway HTTP API (v2)** event.
+ *
+ * Generated when you scaffold with `--api-gateway=v2` (default). Copied to `test-local.js` during scaffold.
  *
  * Usage:
  *   npm run build
@@ -30,7 +32,9 @@ const testEvent = {
 };
 
 async function main() {
-  console.log(JSON.stringify(await handler(testEvent), null, 2));
+  console.log("Running local test (API Gateway v2 HTTP API)...\n");
+  const result = await handler(testEvent);
+  console.log(JSON.stringify(result, null, 2));
 }
 
 main().catch((e) => {

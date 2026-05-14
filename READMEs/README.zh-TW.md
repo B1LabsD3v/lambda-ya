@@ -75,7 +75,7 @@ npm link   # 之後可直接執行 lambda-ya ...
 | `lambda-ya <類型> <資料夾>` | 在指定資料夾建立樣板 |
 | `lambda-ya create <類型> <資料夾>` | 同上 |
 
-常用參數：`--yes`、`--terraform` / `--no-terraform`、`--aws-profile=`、`--aws-account-id=`、`--function-name=`、`--main-handler-file=`、`--main-handler-export=`、`--skip-install`。
+常用參數：`--yes`、`--terraform` / `--no-terraform`、`--api-gateway=v1|v2`、`--aws-profile=`、`--aws-account-id=`、`--function-name=`、`--main-handler-file=`、`--main-handler-export=`、`--skip-install`。
 
 ## Terraform 與僅 zip
 

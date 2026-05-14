@@ -10,18 +10,24 @@ jobs:
   scaffold-and-build:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [20.x]
+        include:
+          - layout: handlers
+            api: v1
+          - layout: handlers
+            api: v2
+          - layout: modular
+            api: v1
+          - layout: modular
+            api: v2
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Scaffold handlers (no Terraform) and build
+          node-version: 20.x
+      - name: Scaffold ${{ matrix.layout }} (API ${{ matrix.api }}) and build
         run: |
-          node bin/lambda-ya.js handlers _ci-handlers --yes --no-terraform --skip-install
-          cd _ci-handlers && npm install && npm run build && node __test__/test-local.js
-      - name: Scaffold modular (no Terraform) and build
-        run: |
-          node bin/lambda-ya.js modular _ci-modular --yes --no-terraform --skip-install
-          cd _ci-modular && npm install && npm run build && node __test__/test-local.js
+          OUT="_ci-${{ matrix.layout }}-${{ matrix.api }}"
+          node bin/lambda-ya.js ${{ matrix.layout }} "$OUT" --yes --no-terraform --skip-install --api-gateway=${{ matrix.api }}
+          cd "$OUT" && npm install && npm run build && node __test__/test-local.js

@@ -75,7 +75,7 @@ npm link   # 以降 lambda-ya を直接実行可能
 | `lambda-ya <type> <dir>` | 指定フォルダに生成 |
 | `lambda-ya create <type> <dir>` | 同上 |
 
-主なフラグ: `--yes`, `--terraform` / `--no-terraform`, `--aws-profile=`, `--aws-account-id=`, `--function-name=`, `--main-handler-file=`, `--main-handler-export=`, `--skip-install`。
+主なフラグ: `--yes`, `--terraform` / `--no-terraform`, `--api-gateway=v1|v2`, `--aws-profile=`, `--aws-account-id=`, `--function-name=`, `--main-handler-file=`, `--main-handler-export=`, `--skip-install`。
 
 ## Terraform と zip のみ
 

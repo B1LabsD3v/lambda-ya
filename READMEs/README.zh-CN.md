@@ -75,7 +75,7 @@ npm link   # 然后可直接运行 lambda-ya ...
 | `lambda-ya <类型> <目录>` | 在指定目录生成脚手架 |
 | `lambda-ya create <类型> <目录>` | 同上 |
 
-常用参数：`--yes`、`--terraform` / `--no-terraform`、`--aws-profile=`、`--aws-account-id=`、`--function-name=`、`--main-handler-file=`、`--main-handler-export=`、`--skip-install`。
+常用参数：`--yes`、`--terraform` / `--no-terraform`、`--api-gateway=v1|v2`、`--aws-profile=`、`--aws-account-id=`、`--function-name=`、`--main-handler-file=`、`--main-handler-export=`、`--skip-install`。
 
 ## Terraform 与仅打包 zip
 

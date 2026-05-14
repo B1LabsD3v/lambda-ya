@@ -75,7 +75,7 @@ npm link   # luego: lambda-ya ...
 | `lambda-ya <tipo> <carpeta>` | Crea el scaffold |
 | `lambda-ya create <tipo> <carpeta>` | Igual |
 
-Opciones: `--yes`, `--terraform` / `--no-terraform`, `--aws-profile=`, `--aws-account-id=`, `--function-name=`, `--main-handler-file=`, `--main-handler-export=`, `--skip-install`.
+Opciones: `--yes`, `--terraform` / `--no-terraform`, `--api-gateway=v1|v2`, `--aws-profile=`, `--aws-account-id=`, `--function-name=`, `--main-handler-file=`, `--main-handler-export=`, `--skip-install`.
 
 ## Terraform vs solo zip
 

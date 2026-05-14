@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+- CLI: split `bin/lambda-ya.js` into ESM modules under `lib/lambda-ya/` with JSDoc types; help, errors, and prompts are English-only.
 - Add [LICENSE.md](LICENSE.md): ISC license, copyright B1LABS.
 - README: centered “landing” header (title, tagline, language links, shields, star-history chart, hero); localized files under `READMEs/` share the same layout with `../assets/hero.png`; `## Quick start` anchor on all locales.
 - Scaffold without Terraform: Cursor Terraform/IAM commands and rules are only copied when using the Terraform branch (`_with_tf`).

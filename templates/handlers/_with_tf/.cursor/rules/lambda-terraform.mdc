@@ -1,0 +1,12 @@
+---
+description: Keep Terraform IAM policies aligned with AWS SDK v3 usage in this Lambda project.
+globs: ["src/**/*.ts", "__iac__/**/*.tf"]
+---
+
+# Rule: IAM and Terraform stay aligned with code (SDK v3)
+
+- Consider **only** modular AWS SDK v3 clients (`@aws-sdk/client-*`) and helpers such as `@aws-sdk/lib-dynamodb`. Do **not** reference or recommend the v2 `aws-sdk` package.
+- When editing IAM, derive permissions from **actual** `client.send(new ...Command(...))` usage in `src/**`, not from assumptions.
+- Prefer **least privilege**: narrow `Action` lists and specific `Resource` ARNs built from `var.aws_region` and `var.aws_account_id` where applicable.
+- Prefer updating `__iac__/lambda.tf` (or a clearly named `iam.tf`) plus `variables.tf` / `terraform.tfvars` when new resource identifiers are needed.
+- After Terraform edits, remind the maintainer to run `terraform fmt`, `terraform plan`, rebuild `lambda.zip`, and follow their deploy path (`__iac__/bin/deploy.sh` when present).

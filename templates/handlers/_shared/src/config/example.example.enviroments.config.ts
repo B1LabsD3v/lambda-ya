@@ -5,6 +5,8 @@
  * - Read `process.env.*` only in this layer (not directly in handlers) and validate values.
  *
  * With AWS SDK v3, build table names or ARNs here and pass them into repositories.
+ *
+ * Excluded from `tsc` — reference only.
  */
 export function exampleReadEnv(name: string, fallback?: string): string {
   const v = process.env[name];

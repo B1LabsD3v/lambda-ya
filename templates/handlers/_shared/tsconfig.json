@@ -23,5 +23,12 @@
     }
   },
   "include": ["src/**/*", "index.ts"],
-  "exclude": ["node_modules", "dist", "__test__"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "__test__",
+    "src/**/r_example.example/**",
+    "src/**/s_example.example/**",
+    "src/**/example.example*.ts"
+  ]
 }

@@ -6,16 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
-- CLI: split `bin/lambda-ya.js` into ESM modules under `lib/lambda-ya/` with JSDoc types; help, errors, and prompts are English-only.
-- Add [LICENSE.md](LICENSE.md): ISC license, copyright B1LABS.
-- README: centered “landing” header (title, tagline, language links, shields, star-history chart, hero); localized files under `READMEs/` share the same layout with `../assets/hero.png`; `## Quick start` anchor on all locales.
-- Scaffold without Terraform: Cursor Terraform/IAM commands and rules are only copied when using the Terraform branch (`_with_tf`).
-- Handler templates use `response` and `parseBody` from `@core/core.utils`.
-- Package metadata: `engines`, `repository`, `bugs`, `homepage`, `funding`, expanded `files` for published docs.
-- `package.json` repository, bugs, and homepage URLs now point at `github.com/B1LabsD3v/lambda-ya`.
-- GitHub: `.github/FUNDING.yml`, `CONTRIBUTING.md`, and CI workflow to validate scaffolds.
-- Cursor: English, expanded prompts for `lambda-test-local` and `lambda-terraform-iam`; Terraform rule descriptions in English.
-- Templates: JSDoc and shell/terraform comments in generated projects are English; sample `note` strings in modular ping response are English.
+## [1.1.0] — 2026-05-14
+
+### Added
+
+- CLI: `--api-gateway=v1|v2` (REST API vs HTTP API) with template vars for `APIGatewayProxyHandler` / `APIGatewayProxyHandlerV2`; interactive prompt when not using `--yes`.
+- Templates: example code moved to `example.example.*` files and `*_example.example/` folders, excluded from `tsc`; modular `index.ts` uses inline `/health` (no imports from example tree); `__test__/test-local.v1.js` / `test-local.v2.js` merged into `test-local.js` at scaffold time.
+- CI: matrix builds handlers and modular for both API Gateway versions.
 
 ## [1.0.0] — 2026-05-14
 
@@ -27,5 +24,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Cursor commands for local tests; Terraform/IAM Cursor assets only in Terraform scaffolds.
 - AWS SDK for JavaScript v3 in generated projects.
 
-[Unreleased]: https://github.com/b1labs/lambda-ya/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/b1labs/lambda-ya/releases/tag/v1.0.0
+[Unreleased]: https://github.com/B1LabsD3v/lambda-ya/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/B1LabsD3v/lambda-ya/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/B1LabsD3v/lambda-ya/releases/tag/v1.0.0

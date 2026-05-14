@@ -1,0 +1,12 @@
+---
+description: Keep Terraform IAM policies aligned with AWS SDK v3 usage in this Lambda project.
+globs: ["src/**/*.ts", "__iac__/**/*.tf"]
+---
+
+# Rule: IAM and Terraform stay aligned with code (SDK v3)
+
+- Use **only** AWS SDK for JavaScript v3 (`@aws-sdk/client-*`, `@aws-sdk/lib-dynamodb`, etc.). Never suggest the legacy `aws-sdk` v2 package.
+- Infer IAM from real usage in `src/**` (services, repositories, handlers). Root `index.ts` is usually transport-only.
+- Apply **least privilege** and build ARNs with `var.aws_region` and `var.aws_account_id` when possible.
+- Keep Terraform changes colocated with existing patterns in `__iac__/**/*.tf`.
+- Remind to run `terraform fmt` / `plan` and rebuild artifacts after policy changes.

@@ -1,0 +1,47 @@
+{
+  "name": "lambda-ya",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "CLI to scaffold AWS Lambda TypeScript projects (handlers & modular layouts, optional Terraform).",
+  "bin": {
+    "lambda-ya": "bin/lambda-ya.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin/",
+    "templates/",
+    "README.md",
+    "READMEs/",
+    "assets/",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE.md"
+  ],
+  "keywords": [
+    "lambda",
+    "aws-lambda",
+    "terraform",
+    "typescript",
+    "scaffold",
+    "generator",
+    "lambda-ya"
+  ],
+  "author": "CrisD3v <crisdev@b1labs.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b1labs/lambda-ya.git"
+  },
+  "bugs": {
+    "url": "https://github.com/b1labs/lambda-ya/issues"
+  },
+  "homepage": "https://github.com/b1labs/lambda-ya#readme",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/crisd3v"
+    }
+  ]
+}
